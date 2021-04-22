@@ -1,0 +1,390 @@
+/* Start Variables */
+:root {
+    --main-color: hsl(322, 100%, 66%);
+}
+/* End Variables */
+
+/* Start General Rules */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1,
+h2 {
+    font-family: 'Poppins', sans-serif;
+    margin: 20px 0;
+    color: hsl(192, 100%, 9%);
+}
+
+h2 {
+    margin: 15px 0;
+}
+
+p {
+    margin: 10px 0;
+    color: hsl(208, 11%, 55%);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: #ddd;
+}
+
+
+
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+/* End General Rules */
+
+/* Start Components */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+button {
+    padding: 15px 50px;
+    border-radius: 30px;
+    border: 0;
+    background: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.8;
+    transform: scale(0.98);
+}
+
+.btn-primary {
+    background-color: var(--main-color);
+    color: white;
+}
+
+.card {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+}
+
+.py-1 {
+    padding: 1rem 0;
+}
+
+.py-2 {
+    padding: 2rem 0;
+}
+
+.py-3 {
+    padding: 3rem 0;
+}
+/* End Components */
+
+/* Start Cover */
+.cover {
+    background-color: hsl(193, 100%, 96%);
+    background-image: url("../images/bg-hero-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 120px;
+}
+
+.cover p {
+    color: initial;
+}
+
+.cover .content img {
+    width: 600px;
+    margin-left: 20px;
+}
+
+.cover .content button {
+    margin-top: 10px
+}
+/* End Cover */
+
+/* Start Contents */
+.contents {
+margin: 40px 0;
+position: relative;
+}
+
+.contents .container {
+    padding: 20px;
+    padding-bottom: 40px;
+}
+
+.contents .container .text {
+    margin: 80px;
+}
+
+.contents img {
+    width: 400px;
+    margin-left: 30px;
+}
+
+.contents:nth-of-type(2) img {
+    margin-left: 50px;
+}
+
+.contents:nth-of-type(2) .text {
+    margin-right: 0;
+    margin-left: 130px;
+}
+
+.contents .ready {
+    position: relative;
+    top: 120px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 600px;
+    /* height: 200px; */
+    padding: 50px 0;
+}
+
+.contents .ready button {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+/* End Contents */
+
+/* Start Footer */
+footer {
+    background-color: hsl(192, 100%, 9%);
+    color:#ddd;
+    padding: 100px 0 50px;
+}
+
+footer .grid {
+    display: grid;
+    grid-template-columns: 1fr 15% 15% 15%;
+    gap: 60px;
+    justify-content: space-between;
+}
+
+footer .logo {
+margin-left: -20px;
+}
+
+footer p {
+    color: #ddd;
+}
+
+footer .grid .call .flex{
+    justify-content: flex-start;
+}
+
+footer .grid .call .flex img {
+    width: 25px;
+    margin-top: 5px;
+    margin-right: 25px;
+    align-self: flex-start;
+}
+
+footer .grid .call .flex p {
+    align-self: flex-start;
+    margin-top: 0;
+}
+
+footer .links-01 a:hover,
+footer .links-02 a:hover {
+    border-bottom: 1px solid #ddd;
+}
+
+footer .social .icons {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+footer .social .icons div {
+    margin-left: 30px;
+}
+
+footer .social .icons div span {
+    font-size: 25px;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer .social .icons a:hover span {
+    color: var(--main-color);
+    border-color: var(--main-color);
+    transform: scale(0.98);
+}
+
+footer .copy {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+/* End Footer */
+
+/* Start Phone size */
+@media (max-width: 767px) {
+    body {
+        text-align: center;
+    }
+
+    .card {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .flex {
+        flex-direction: column;
+    }
+
+    .cover {
+        background-image: url("../images/bg-hero-mobile.svg");
+    }
+
+    .cover header {
+        flex-direction: row;
+    }
+
+    .cover header img {
+        width: 150px;
+    }
+
+    .cover header button {
+        padding: 10px 30px;
+    }
+
+    .cover .text h1 {
+        font-size: 28px;
+        line-height: 1.4;
+    }
+
+    .cover .content img {
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    /***************/
+
+    .contents .flex {
+        flex-direction: column-reverse;
+    }
+
+    .contents .normal {
+        flex-direction: column;
+    }
+
+    .contents .normal img {
+        margin: 0;
+    }
+
+    .contents .flex img {
+        width: 100%;
+    }
+
+    .contents .flex .text {
+        margin: 0;
+        margin-top: 30px;
+    }
+
+    /******************/
+
+    .ready.flex {
+        max-width: 95%;
+        flex-direction: column;
+        padding: 30px 5px;
+    }
+
+    .ready h1 {
+        font-size: 20px;
+    }
+
+    .contents .ready button {
+        padding: 10px 40px;
+    }
+
+    /******************/
+
+    footer {
+        text-align: left;
+        margin-bottom: 10px;
+    }
+
+    footer .logo img {
+        width: 180px;
+    }
+
+    footer .grid {
+        grid-template-columns: 100%;
+        gap: 0;
+    }
+
+    footer .call .flex {
+        margin-bottom: 10px;
+    }
+
+    footer .flex {
+        flex-direction: row;
+    }
+
+    footer .links-01 {
+        margin-top: 30px;
+    }
+
+    footer .links-02 {
+        margin-bottom: 30px;
+    }
+
+    footer .social {
+        margin-bottom: 20px;
+    }
+
+    footer .social .icons div span {
+        width: 30px;
+        height: 30px;
+        font-size: 18px;
+    }
+
+    footer .copy,
+    footer .me {
+        text-align: center;
+        font-size: 15px;
+    }
+
+    footer .me a {
+        font-weight: bold;
+        color: var(--main-color);
+    }
+}
+/* End Phone size */
