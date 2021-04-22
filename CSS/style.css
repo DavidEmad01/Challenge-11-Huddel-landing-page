@@ -253,6 +253,11 @@ footer .copy {
     align-items: center;
 }
 
+footer .me {
+    text-align: center;
+    margin-top: 20px;
+}
+
 footer .me a {
     font-weight: bold;
     color: var(--main-color);
