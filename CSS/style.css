@@ -252,6 +252,11 @@ footer .copy {
     justify-content: flex-end;
     align-items: center;
 }
+
+footer .me a {
+    font-weight: bold;
+    color: var(--main-color);
+}
 /* End Footer */
 
 /* Start Phone size */
